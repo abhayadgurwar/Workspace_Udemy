@@ -16,19 +16,18 @@ public class SayHelloController {
     @RequestMapping("/say-hello-html")
     @ResponseBody
     public String sayHelloHtml() {
-        StringBuilder sb= new StringBuilder();
-        sb.append("<html>");
-        sb.append("<head>");
-        sb.append("<title>Hello</title>");
-        sb.append("</head>");
 
-        sb.append("<body>");
-        sb.append("<h1>Hello! What are you learning today</h1>");
-        sb.append("</body>");
-        sb.append("</html>");
+        String sb = "<html>" +
+                "<head>" +
+                "<title>Hello</title>" +
+                "</head>" +
+                "<body>" +
+                "<h1>Hello! What are you learning today</h1>" +
+                "</body>" +
+                "</html>";
 
 
-      return sb.toString();
+        return sb;
     }
 
     @RequestMapping("/say-hello-jsp")

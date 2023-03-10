@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class TodoService {
-    private static List<ToDo> todos  =new ArrayList();
+    private static final List<ToDo> todos = new ArrayList();
     static {
         todos.add(new ToDo(1, "in28Minutes", "Learn AWS", LocalDate.now().plusYears(1), false));
         todos.add(new ToDo(2, "in28Minutes", "Learn DevOps", LocalDate.now().plusYears(2), false));

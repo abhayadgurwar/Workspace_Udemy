@@ -1,20 +1,17 @@
 package com.in28minutes.springboot.myfirstwebapp.todo;
 
+import jakarta.validation.constraints.Size;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 
 @Repository
 public class ToDo {
-
     private int id;
-
     private String username;
-
+    @Size(min = 10, message = "Enter at least 10 Characters")
     private String description;
-
     private LocalDate targetDate;
-
     private boolean done;
 
     public ToDo() {
@@ -29,7 +26,6 @@ public class ToDo {
         this.targetDate = targetDate;
         this.done = done;
     }
-
     public int getId() {
         return id;
     }
